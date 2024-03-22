@@ -2,9 +2,140 @@
 {% load static %}
 
 {%  block desc %}
-    <span> interesting description for menu</span>
+    <span>Welcome to our platform where you can effortlessly and smoothly calculate the values of geometric figures. 
+        Whether you're a student, educator, or professional, our intuitive tools make geometry a breeze. Unlock the 
+        power of precision with our user-friendly interface and explore the endless possibilities of mathematical 
+        exploration.</span>
 {% endblock %}
 
 {%  block content %}
-    <span> you are in in the menu</span>
+    <section class="fig">
+        <a href="/square">
+            <img src="{% static 'images/square.svg' %}" alt="square">
+            <div class="fig-desc">
+                <h3>Square</h3>
+                <span>A square is a four-sided polygon with equal sides and equal angles. 
+                    It is a special case of a rectangle where all four sides are of equal length. 
+                    The angles of a square are all right angles (90 degrees), and opposite sides are parallel. 
+                    The diagonals of a square bisect each other at right angles, dividing the square into four 
+                    congruent right triangles. The perimeter of a square is the sum of the lengths of its four 
+                    sides, while its area is calculated by squaring the length of one of its sides.</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="fig">
+        <a href="/triangle">
+            <img src="{% static 'images/triangle.svg' %}" alt="triangle">
+            <div class="fig-desc">
+                <h3>Triangle</h3>
+                <span>
+                    A triangle is a polygon with three sides and three angles. It's classified based on the 
+                    lengths of its sides and the measures of its angles. Types include equilateral (all sides 
+                    and angles are equal), isosceles (two sides and angles are equal), and scalene (all sides 
+                    and angles are different). The area of a triangle can be calculated using different methods,
+                     and its perimeter is the sum of the lengths of its sides.</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="fig">
+        <a href="/circle">
+            <img src="{% static 'images/circle.svg' %}" alt="circle">
+            <div class="fig-desc">
+                <h3>Circle</h3>
+                <span>A circle is a two-dimensional shape with all points on its boundary equidistant from its
+                     center. It has a radius, which is the distance from the center to any point on the circle's
+                      edge. Circles are fundamental geometric shapes found in nature and commonly used in mathematics,
+                       art, and engineering for their symmetry and simplicity.</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="fig">
+        <a href="/rectangle">
+            <img src="{% static 'images/rectangle.svg' %}" alt="rectangle">
+            <div class="fig-desc">
+                <h3>Rectangle</h3>
+                <span>
+                    A rectangle is a quadrilateral with four right angles (90-degree angles).
+                     Opposite sides of a rectangle are equal in length, and its diagonals are
+                      equal in length and bisect each other. The area of a rectangle can be calculated
+                       by multiplying its length by its width, while its perimeter is the sum of all four
+                        sides. Rectangles are commonly encountered in everyday life and are used in architecture
+                        , design, and various mathematical applications.</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="fig">
+        <a href="/cube">
+            <img src="{% static 'images/cube.svg' %}" alt="cube">
+            <div class="fig-desc">
+                <h3>Cube</h3>
+                <span>
+                    A cube is a three-dimensional geometric shape with six square faces of equal size. All
+                     angles within a cube are right angles, and all edges are of equal length. The cube is
+                      a regular polyhedron, meaning all of its faces are congruent and its angles are equal.
+                       Cubes are widely used in architecture, engineering, and mathematics due to their regularity
+                        and symmetry.</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="fig">
+        <a href="/sphere">
+            <img src="{% static 'images/sphere.svg' %}" alt="sphere">
+            <div class="fig-desc">
+                <h3>Sphere</h3>
+                <span>
+                    A sphere is a three-dimensional object with all points on its surface equidistant from its center.
+                     It is perfectly symmetrical, with no edges or vertices. The distance from the center to any point
+                      on the surface is called the radius. Spheres are commonly encountered in nature and are used in
+                       various fields such as physics, astronomy, and engineering for their uniformity and simplicity
+                        of shape.</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="fig">
+        <a href="/prism">
+            <img src="{% static 'images/prism.png' %}" alt="Right prism">
+            <div class="fig-desc">
+                <h3>Right prism</h3>
+                <span>
+                    A right prism is a three-dimensional geometric figure characterized by parallel congruent polygonal
+                     bases connected by rectangular faces. Each vertex of the base is connected to the corresponding vertex
+                      of the other base by a perpendicular edge. The height of the prism is the perpendicular distance between
+                       the two bases. Right prisms include rectangular prisms, triangular prisms, hexagonal prisms, and so on,
+                        depending on the shape of their bases. They are widely used in geometry and engineering for their regularity
+                         and ease of calculation.</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="fig">
+        <a href="/tesseract">
+            <img src="{% static 'images/tesseract.gif' %}" alt="tesseract">
+            <div class="fig-desc">
+                <h3>Tesseract</h3>
+                <span>
+                    A tesseract, or hypercube, is a four-dimensional geometric figure analogous to a cube in three dimensions.
+                     It consists of eight cubical cells connected in a manner similar to how a cube is formed by connecting six
+                      square faces. Beyond three dimensions, mathematicians explore higher-dimensional shapes such as hyperspheres
+                       and hypercubes. These concepts, while abstract, have significant applications in mathematics, physics,
+                        and computer science.</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="fig">
+        <a href="/human">
+            <img src="{% static 'images/human.png' %}" alt="human body">
+            <div class="fig-desc">
+                <h3>Human body</h3>
+                <span></span>
+            </div>
+        </a>
+    </section>
 {% endblock %}

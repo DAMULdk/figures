@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" width="656.99396" height="799.99837" viewBox="0,0,656.99396,799.99837" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(0.868812, 0, 0, 0.868812, -13.027904, 108.154176)" style="">
+    <g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill-rule="nonzero" stroke="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" style="mix-blend-mode: normal">
+      <path d="M723.27098,141.62646v386.29346l-328.49698,206.85245l-328.49698,-206.85245v-386.29346l328.49698,-206.85245zM394.774,-7.39852l-258.11129,162.53252l258.11129,162.53252l258.11129,-162.53252zM115.21148,500.90647l255.0953,160.63223v-301.45254l-255.0953,-160.6306zM674.33653,500.9081v-301.45254l-255.0953,160.63223v301.45254z" fill="#000000" stroke-width="1"/>
+      <path d="M419.21706,661.5841l-0.01961,-301.52047l255.16324,-160.65184l0.01961,301.52047z" data-paper-data="{&quot;noHover&quot;:false,&quot;origItem&quot;:[&quot;Path&quot;,{&quot;applyMatrix&quot;:true,&quot;segments&quot;:[[674.33653,500.9081],[674.33653,199.45556],[419.24123,360.08779],[419.24123,661.54033]],&quot;closed&quot;:true,&quot;fillColor&quot;:[0,0,0,1]}]}" fill="#ffffff" stroke-width="0.5"/>
+      <path d="M115.18731,199.41179l255.16324,160.65021l-0.01961,301.52047l-255.16324,-160.65184z" data-paper-data="{&quot;noHover&quot;:false,&quot;origItem&quot;:[&quot;Path&quot;,{&quot;applyMatrix&quot;:true,&quot;segments&quot;:[[115.21148,500.90647],[370.30678,661.5387],[370.30678,360.08616],[115.21148,199.45556]],&quot;closed&quot;:true,&quot;fillColor&quot;:[0,0,0,1]}]}" fill="#ffffff" stroke-width="0.5"/>
+      <path d="M652.9353,155.134l-258.16129,162.58252l-258.16129,-162.58252l258.16129,-162.58252z" data-paper-data="{&quot;noHover&quot;:false,&quot;origItem&quot;:[&quot;Path&quot;,{&quot;applyMatrix&quot;:true,&quot;segments&quot;:[[394.774,-7.39852],[136.66271,155.134],[394.774,317.66652],[652.8853,155.134]],&quot;closed&quot;:true,&quot;fillColor&quot;:[0,0,0,1]}]}" fill="#ffffff" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>
