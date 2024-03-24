@@ -1,5 +1,35 @@
 {% extends "figures/main.html" %}
 {% load static %}
-{%  block content %}
-    <span> you are in in the circle</span>
+
+{% block desc %}
+    <h2>Circle: Definition and Properties</h2>
+    <p>A circle is a geometric shape characterized by all points in a plane that are a given distance from a given point, called the center.</p>
+    <h2>Calculations for a Circle</h2>
+    <p>To calculate various properties of a circle:</p>
+    <ul>
+        <li><strong>Radius:</strong> The radius of a circle is the distance from the center to any point on the circle.</li>
+        <li><strong>Diameter:</strong> The diameter of a circle is twice the length of the radius. It is a straight line passing through the center of the circle and connecting two points on the circle.</li>
+        <li><strong>Area:</strong> The area of a circle can be calculated using the formula: <span>A = πr<sup>2</sup></span>, where <span>r</span> represents the radius of the circle.</li>
+        <li><strong>Circumference:</strong> The circumference of a circle is the perimeter of the circle and can be calculated using the formula: <span>C = 2πr</span>, where <span>r</span> represents the radius of the circle.</li>
+    </ul>
+    <h2>Fun Fact about Circles</h2>
+    <p>A circle is a symmetric shape with infinite lines of symmetry. It is a fundamental shape in geometry and finds applications in various fields such as mathematics, engineering, and design.</p>
+{% endblock %}
+
+{% block content %}
+    <div class="calc">
+        <section class="view">
+            <canvas id="canvas"></canvas>
+        </section>
+        <section class="control">
+            <form name="form1" method="post">
+                <input type="number" name="num_r"> <label for="num_r">Radius</label>
+                <input type="number" name="num_d"> <label for="num_d">Diameter</label>
+                <input type="number" name="num_A"> <label for="num_A">Area</label>
+                <input type="number" name="num_C"> <label for="num_C">Circumference</label>
+                <input type="button" value="Calculate" id="calculate">
+            </form>
+        </section>
+    </div>
+    <script src="{% static 'js/circle.js' %}"></script>
 {% endblock %}
