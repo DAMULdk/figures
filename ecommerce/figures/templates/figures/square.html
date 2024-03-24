@@ -1,5 +1,35 @@
 {% extends "figures/main.html" %}
 {% load static %}
+
+{%  block desc %}
+    <h2>Square: Definition and Properties</h2>
+    <p>A square is a geometric shape characterized by four equal sides and four right angles. It is a special case of a rectangle where all sides are of equal length.</p>
+    <h2>Calculations for a Square</h2>
+    <p>To calculate various properties of a square:</p>
+    <ul>
+    <li><strong>Side Length:</strong> Since all sides of a square are equal, the side length can be determined by measuring any one side.</li>
+    <li><strong>Area:</strong> The area of a square is found by squaring the length of one side. Mathematically, it can be expressed as: <span>A = s<sup>2</sup></span>, where <span>s</span> represents the length of a side.</li>
+    <li><strong>Perimeter:</strong> The perimeter of a square is the sum of the lengths of all four sides. It can be calculated as: <span>P = 4s</span>, where <span>s</span> represents the length of a side.</li>
+    <li><strong>Diagonal:</strong> The diagonal of a square is a line segment connecting two opposite vertices. It divides the square into two congruent right triangles. The length of the diagonal can be calculated using the Pythagorean theorem: <span>d = √(s<sup>2</sup> + s<sup>2</sup>) = √2s</span>.</li>
+    </ul>
+    <h2>Fun Fact about Squares</h2>
+    <p>A square is a symmetric shape, meaning it looks the same when rotated by 90, 180, or 270 degrees. This property makes it a fundamental element in various mathematical and architectural designs, symbolizing stability and equality.</p>
+{% endblock %}
+
 {%  block content %}
-    <span> you are in in the square</span>
+    <div class="calc">
+        <section class="view">
+            <canvas id="canvas"></canvas>
+        </section>
+        <section class="control">
+            <form name="form1" method="post">
+                <input type="number" name="num_a"> <label for="num_a">Side length</label>
+                <input type="number" name="num_A"> <label for="num_A">Area</label>
+                <input type="number" name="num_p"> <label for="num_p">Permimeter</label>
+                <input type="number" name="num_d"> <label for="num_d">Diagonal length</label>
+                <input type="button" value="Calculate" id="calculate">
+            </form>
+        </section>
+    </div>
+    <script src="{% static 'js/square.js' %}"></script>
 {% endblock %}

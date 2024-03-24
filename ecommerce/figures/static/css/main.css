@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #eeeeee;
+    background-color: #eee;
     color: #333;
 }
 
@@ -67,10 +67,15 @@ header img:hover {
 }
 
 .description {
-    color: #f7f7f7;
+    color: rgb(183, 183, 183);
     font-size: 1em;
     margin-top: 20px;
+    padding-left: 20px;
     max-width: 860px;
+}
+
+.description h2 {
+    padding-top: 5px;
 }
 
 
@@ -185,4 +190,54 @@ footer {
 
 .fig:hover .fig-desc{
     color: #eee;
+}
+
+
+.calc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.view {
+    flex: 1;
+}
+
+.calc form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calc input[type="number"] {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.calc input[type="button"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calc input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+canvas {
+    border: 2px solid #ccc;
+    width: 100%;
 }
