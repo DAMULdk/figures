@@ -1,5 +1,35 @@
 {% extends "figures/main.html" %}
 {% load static %}
-{%  block content %}
-    <span> you are in in the cube</span>
+
+{% block desc %}
+    <h2>Cube: Definition and Properties</h2>
+    <p>A cube is a three-dimensional geometric shape characterized by six square faces, twelve straight edges, and eight vertices (corners).</p>
+    <h2>Calculations for a Cube</h2>
+    <p>To calculate various properties of a cube:</p>
+    <ul>
+        <li><strong>Side Length:</strong> Since all sides of a cube are equal, the side length can be determined by measuring any one side.</li>
+        <li><strong>Volume:</strong> The volume of a cube is found by cubing the length of one side. Mathematically, it can be expressed as: <span>V = s<sup>3</sup></span>, where <span>s</span> represents the length of a side.</li>
+        <li><strong>Surface Area:</strong> The surface area of a cube is the sum of the areas of its six square faces. It can be calculated as: <span>A = 6s<sup>2</sup></span>, where <span>s</span> represents the length of a side.</li>
+        <li><strong>Diagonal Length:</strong> The diagonal of a cube is a line segment connecting two opposite vertices through the center of the cube. It can be calculated using the Pythagorean theorem: <span>d = √(s<sup>2</sup> + s<sup>2</sup> + s<sup>2</sup>) = √3s</span>.</li>
+    </ul>
+    <h2>Fun Fact about Cubes</h2>
+    <p>A cube is a regular solid, meaning all its faces are congruent regular polygons (in this case, squares), and all its edges have the same length. Cubes have many applications in daily life, architecture, engineering, and mathematics.</p>
+{% endblock %}
+
+{% block content %}
+    <div class="calc">
+        <section class="view">
+            <canvas id="canvas"></canvas>
+        </section>
+        <section class="control">
+            <form name="form1" method="post">
+                <input type="number" name="num_a"> <label for="num_a">Side length</label>
+                <input type="number" name="num_V"> <label for="num_V">Volume</label>
+                <input type="number" name="num_A"> <label for="num_A">Surface Area</label>
+                <input type="number" name="num_d"> <label for="num_d">Diagonal length</label>
+                <input type="button" value="Calculate" id="calculate">
+            </form>
+        </section>
+    </div>
+    <script src="{% static 'js/cube.js' %}"></script>
 {% endblock %}

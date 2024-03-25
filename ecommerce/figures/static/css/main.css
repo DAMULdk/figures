@@ -222,8 +222,22 @@ footer {
     font-size: 12px;
 }
 
+.calc .readonly{
+    background-color: #eee;
+}
+
+.calc #info{
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+    color: red;
+    font-size: smaller;
+    text-align: center;
+}
+
 .calc input[type="button"] {
     margin-top: 10px;
+    margin-bottom: 40px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;

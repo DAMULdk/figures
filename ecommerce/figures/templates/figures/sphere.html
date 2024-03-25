@@ -1,5 +1,33 @@
 {% extends "figures/main.html" %}
 {% load static %}
-{%  block content %}
-    <span> you are in in the sphere</span>
+
+{% block desc %}
+    <h2>Sphere: Definition and Properties</h2>
+    <p>A sphere is a three-dimensional geometric object that is perfectly round in shape like a ball. It is defined as the set of all points in three-dimensional Euclidean space that are equidistant from a given point called the center.</p>
+    <h2>Calculations for a Sphere</h2>
+    <p>To calculate various properties of a sphere:</p>
+    <ul>
+        <li><strong>Radius:</strong> The radius of a sphere is the distance from its center to any point on its surface.</li>
+        <li><strong>Volume:</strong> The volume of a sphere is given by the formula: <span>V = (4/3)πr<sup>3</sup></span>, where <span>r</span> is the radius of the sphere.</li>
+        <li><strong>Surface Area:</strong> The surface area of a sphere is given by the formula: <span>A = 4πr<sup>2</sup></span>, where <span>r</span> is the radius of the sphere.</li>
+    </ul>
+    <h2>Fun Fact about Spheres</h2>
+    <p>Spheres are found in many aspects of everyday life and nature, from balls used in sports to planetary bodies like the Earth and the Sun. They have unique properties, such as having the maximum volume for a given surface area, making them efficient shapes for containing and enclosing.</p>
+{% endblock %}
+
+{% block content %}
+    <div class="calc">
+        <section class="view">
+            <canvas id="canvas"></canvas>
+        </section>
+        <section class="control">
+            <form name="form1" method="post">
+                <input type="number" name="num_r"> <label for="num_r">Radius</label>
+                <input type="number" name="num_V"> <label for="num_V">Volume</label>
+                <input type="number" name="num_A"> <label for="num_A">Surface Area</label>
+                <input type="button" value="Calculate" id="calculate">
+            </form>
+        </section>
+    </div>
+    <script src="{% static 'js/sphere.js' %}"></script>
 {% endblock %}

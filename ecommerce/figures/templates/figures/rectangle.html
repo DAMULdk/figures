@@ -1,5 +1,36 @@
 {% extends "figures/main.html" %}
 {% load static %}
-{%  block content %}
-    <span> you are in in the rectangle</span>
+
+{% block desc %}
+    <h2>Rectangle: Definition and Properties</h2>
+    <p>A rectangle is a geometric shape characterized by four right angles and opposite sides that are equal in length. It includes squares as a special case where all sides are of equal length.</p>
+    <h2>Calculations for a Rectangle</h2>
+    <p>To calculate various properties of a rectangle:</p>
+    <ul>
+        <li><strong>Side Lengths:</strong> The length and width of a rectangle can be determined by measuring any pair of opposite sides.</li>
+        <li><strong>Area:</strong> The area of a rectangle is found by multiplying its length by its width. Mathematically, it can be expressed as: <span>A = l * w</span>, where <span>l</span> represents the length and <span>w</span> represents the width.</li>
+        <li><strong>Perimeter:</strong> The perimeter of a rectangle is the sum of the lengths of all four sides. It can be calculated as: <span>P = 2(l + w)</span>, where <span>l</span> represents the length and <span>w</span> represents the width.</li>
+        <li><strong>Diagonals:</strong> A rectangle has two diagonals that bisect each other at their midpoint. The length of the diagonals can be calculated using the Pythagorean theorem: <span>d = √(l<sup>2</sup> + w<sup>2</sup>)</span>.</li>
+    </ul>
+    <h2>Fun Fact about Rectangles</h2>
+    <p>Rectangles are widely used in various fields, including architecture, engineering, and graphic design. They offer simplicity in calculations and are often utilized in creating structured and organized layouts.</p>
+{% endblock %}
+
+{% block content %}
+    <div class="calc">
+        <section class="view">
+            <canvas id="canvas"></canvas>
+        </section>
+        <section class="control">
+            <form name="form1" method="post">
+                <input type="number" name="num_a"> <label for="num_a">Length</label>
+                <input type="number" name="num_b"> <label for="num_b">Width</label>
+                <input type="number" name="num_A"> <label for="num_A">Area</label>
+                <input type="number" name="num_p"> <label for="num_p">Perimeter</label>
+                <input type="number" name="num_d"> <label for="num_d">Diagonal length</label>
+                <input type="button" value="Clear" id="calculate">
+            </form>
+        </section>
+    </div>
+    <script src="{% static 'js/rectangle.js' %}"></script>
 {% endblock %}

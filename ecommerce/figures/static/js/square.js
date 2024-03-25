@@ -52,13 +52,7 @@ document.getElementById("calculate").addEventListener("click", function() {
     let A = parseFloat(form1.num_A.value);
     let p = parseFloat(form1.num_p.value);
 
-    if (lastModifiedField === "num_a") {
-        form1.num_A.value = a * a;
-        form1.num_p.value = a * 4;
-        form1.num_d.value = a * Math.sqrt(2);
-        drawSquare(a, parseFloat(form1.num_A.value), parseFloat(form1.num_p.value), parseFloat(form1.num_d.value));
-        return 0;
-    } else if (lastModifiedField === "num_A") {
+    if (lastModifiedField === "num_A") {
         a = Math.sqrt(A);
     } else if (lastModifiedField === "num_p") {
         a = p / 4;

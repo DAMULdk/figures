@@ -1,5 +1,47 @@
 {% extends "figures/main.html" %}
 {% load static %}
-{%  block content %}
-    <span> you are in in the right prism</span>
+
+{% block desc %}
+    <h2>Prism: Definition and Properties</h2>
+    <p>A prism is a three-dimensional geometric figure with two congruent polygonal bases and rectangular sides. When the cross-section of the prism is a polygon, and the side faces are perpendicular to the base, it is called a right prism.</p>
+    <h2>Calculations for a Prism</h2>
+    <p>To calculate various properties of a prism:</p>
+    <ul>
+        <li><strong>Number of Sides (n):</strong> The number of sides in the base polygon of the prism.</li>
+        <li><strong>Side Length (s):</strong> The length of each side of the base polygon.</li>
+        <li><strong>Height (h):</strong> The perpendicular distance between the two bases of the prism.</li>
+        <li><strong>Apothem Length (a):</strong> The apothem is the distance from the center of the base polygon to the midpoint of any side. It's also the radius of the inscribed circle.</li>
+        <li><strong>Volume:</strong> The volume of a prism is given by the formula: <span>V = 0.25 * n * s<sup>2</sup> * h * cot(π/n)</span>, where <span>n</span> is the number of sides, <span>s</span> is the length of each side of the base polygon, and <span>h</span> is the height of the prism.</li>
+        <li><strong>Lateral Surface Area:</strong> The lateral surface area of a prism is given by the formula: <span>A = n * s * h</span>, where <span>n</span> is the number of sides, <span>s</span> is the length of each side of the base polygon, and <span>h</span> is the height of the prism.</li>
+        <li><strong>Base Surface Area:</strong> The base surface area of a prism is given by the formula: <span>A<sub>base</sub> = 0.5 * n * s * a</span>, where <span>a</span> is the apothem length.</li>
+        <li><strong>Vertex Count:</strong> The number of vertices in a prism is given by the formula: <span>V = 2n</span>, where <span>n</span> is the number of sides of the base polygon.</li>
+        <li><strong>Edge Count:</strong> The number of edges in a prism is given by the formula: <span>E = 3n</span>, where <span>n</span> is the number of sides of the base polygon.</li>
+    </ul>
+    <p>Please ensure you provide values for all three required parameters (n, s, and h) to perform calculations.</p>
+    <h2>Fun Fact about Prisms</h2>
+    <p>Prisms are commonly found in architecture and engineering as they are used in the construction of buildings, bridges, and other structures. They play a significant role in providing support and stability to various constructions.</p>
+{% endblock %}
+
+{% block content %}
+    <div class="calc">
+        <section class="view">
+            <canvas id="canvas"></canvas>
+        </section>
+        <section class="control">
+            <form name="form1" method="post">
+                <input type="number" name="num_n" min="3" step="1"> <label for="num_n">Number of Sides (n)</label>
+                <input type="number" name="num_s"> <label for="num_s">Side Length (s)</label>
+                <input type="number" name="num_h"> <label for="num_h">Height (h)</label>
+                <input type="button" value="Calculate" id="calculate">
+                <p id="info" style="color: red;"></p>
+                <input type="number" name="num_V" readonly class="readonly"> <label for="num_V">Volume</label>
+                <input type="number" name="num_A" readonly class="readonly"> <label for="num_A">Surface Area</label>
+                <input type="number" name="num_A2" readonly class="readonly"> <label for="num_A2">Base Surface Area</label>
+                <input type="number" name="num_A3" readonly class="readonly"> <label for="num_A3">Lateral Surface Area</label>
+                <input type="number" name="num_v" readonly class="readonly"> <label for="num_v">Vertex count</label>
+                <input type="number" name="num_e" readonly class="readonly"> <label for="num_e">Edges count</label>
+            </form>
+        </section>
+    </div>
+    <script src="{% static 'js/prism.js' %}"></script>
 {% endblock %}

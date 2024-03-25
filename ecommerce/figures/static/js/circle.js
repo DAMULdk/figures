@@ -54,13 +54,7 @@ document.getElementById("calculate").addEventListener("click", function() {
     let A = parseFloat(form1.num_A.value);
     let C = parseFloat(form1.num_C.value);
 
-    if (lastModifiedField === "num_r") {
-        form1.num_A.value = Math.PI * r * r;
-        form1.num_C.value = 2 * Math.PI * r;
-        form1.num_d.value = 2 * r;
-        drawCircle(r, parseFloat(form1.num_d.value), parseFloat(form1.num_A.value), parseFloat(form1.num_C.value));
-        return 0;
-    } else if (lastModifiedField === "num_d") {
+    if (lastModifiedField === "num_d") {
         r = d / 2;
     } else if (lastModifiedField === "num_A") {
         r = Math.sqrt(A / Math.PI);
