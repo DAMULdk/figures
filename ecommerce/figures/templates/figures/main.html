@@ -12,27 +12,32 @@
     <main>
         <header>
             <nav>
-                <div class="home"><a href="/"><img src="{% static 'images/home.png' %}" alt="home"></a></div>
-                <div class="banner">
-                    <span class="title">F</span>
-                    <span class="title">i</span>
-                    <span class="title">g</span>
-                    <span class="title">u</span>
-                    <span class="title">r</span>
-                    <span class="title">e</span>
-                    <span class="title">&nbsp;</span>
-                    <span class="title">c</span>
-                    <span class="title">a</span>
-                    <span class="title">l</span>
-                    <span class="title">c</span>
-                    <span class="title">u</span>
-                    <span class="title">l</span>
-                    <span class="title">a</span>
-                    <span class="title">t</span>
-                    <span class="title">o</span>
-                    <span class="title">r</span>
-                </div>
-                <img src="{% static 'images/logo.svg' %}" alt="Logo">
+                <section class="left">
+                    <div class="home"><a href="/"><img src="{% static 'images/home.png' %}" alt="home"></a></div>
+                    <div class="banner">
+                        <span class="title">F</span>
+                        <span class="title">i</span>
+                        <span class="title">g</span>
+                        <span class="title">u</span>
+                        <span class="title">r</span>
+                        <span class="title">e</span>
+                        <span class="title">&nbsp;</span>
+                        <span class="title">c</span>
+                        <span class="title">a</span>
+                        <span class="title">l</span>
+                        <span class="title">c</span>
+                        <span class="title">u</span>
+                        <span class="title">l</span>
+                        <span class="title">a</span>
+                        <span class="title">t</span>
+                        <span class="title">o</span>
+                        <span class="title">r</span>
+                    </div>
+                </section>
+                <section class="right">
+                    <img src="{% static 'images/coffe.svg' %}" alt="donations" id="coffe">
+                    <img src="{% static 'images/logo.svg' %}" alt="Logo">
+                </section>
             </nav>
             <div class="description">
                 {% block desc %}
@@ -45,6 +50,26 @@
             {% block content %}
 
             {% endblock %}
+        </div>
+
+        <div class="donations">
+            <h2>Support my work!</h2>
+            <button id="close"><img src="https://www.freeiconspng.com/thumbs/close-button-png/black-circle-close-button-png-5.png" alt="close"></button>
+            <div class="donations-main">
+                <form name="form2" method="post">
+                    <input type="text" name="name" placeholder="Your name"> <label for="name">Name</label> <br>
+                    <input type="number" name="amount" value="5" min="1"> <label for="amount">Amount</label> <br>
+                    <input type="checkbox" name="hideName"> <label for="hideName">Hide Name</label>
+                    <input type="checkbox" name="hideAmount"> <label for="hideAmount">Hide Amount</label> <br>
+                    <input type="button" value="Donate!">
+                </form>
+                <span id="afford1"></span>
+                <span id="afford2"></span>
+                <section class="donaters">
+                    <h3>Donaters:</h3>
+                    <table id="donaters"></table>
+                </section>
+            </div>
         </div>
 
         <footer>

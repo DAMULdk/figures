@@ -1,5 +1,39 @@
 {% extends "figures/main.html" %}
 {% load static %}
-{%  block content %}
-    <span> you are in in the human</span>
+
+{% block desc %}
+    <h2>Human Body: Volume and Surface Area Calculation</h2>
+    <p>This section calculates the volume and surface area of a human body based on height and weight.</p>
+    <h2>Calculations for Human Body</h2>
+    <p>To calculate various properties of a human body:</p>
+    <ul>
+        <li><strong>Height (h):</strong> The height of the person in centimeters.</li>
+        <li><strong>Weight (w):</strong> The weight of the person in kilograms.</li>
+        <li><strong>Volume:</strong> The volume of a human body is calculated using the formula: <span>V = Weight (kg) / * 1,01523</span>.</li>
+        <li><strong>Surface Area:</strong> The surface area of a body is calculated using the formula: <span>A = sqrt((Weight (kg) * Height (cm)) / 3600)</span>.</li>
+    </ul>
+    <p>Please provide values for both height and weight to perform calculations.</p>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="calc">
+        <section class="view">
+            <img src="{% static 'images/human.png' %}" alt="body" id="body">
+        </section>
+        <section class="control">
+            <form name="form1" method="post">
+                {% comment %} <input type="radio" name="gender" id="male" checked> <label for="gender">Male</label>
+                <input type="radio" name="gender" id="Female"> <label for="gender">Female</label> {% endcomment %}
+                <input type="number" name="num_h" id="num_h"> <label for="num_h">Height (cm)</label>
+                <input type="number" name="num_w" id="num_w"> <label for="num_w">Weight (kg)</label>
+                <input type="button" value="Calculate" id="calculate">
+                <p id="info" style="color: red;"></p>
+                <input type="number" name="num_V" readonly class="readonly"> <label for="num_V">Volume [dm³]</label>
+                <input type="number" name="num_A" readonly class="readonly"> <label for="num_A">Surface Area [m²]</label>
+                <input type="number" name="num_BMI" readonly class="readonly"> <label for="num_BMI">BMI</label>
+            </form>
+        </section>
+    </div>
+    <script src="{% static 'js/human.js' %}"></script>
 {% endblock %}

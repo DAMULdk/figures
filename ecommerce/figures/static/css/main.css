@@ -23,7 +23,12 @@ header {
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #f7f7f7;
+}
+
+.left {
+    display: flex;
 }
 
 .home img {
@@ -60,6 +65,11 @@ header img {
     width: 100px;
     transition: transform 0.3s ease;
     margin-left: auto;
+    cursor: pointer;
+}
+
+#coffe {
+    scale: 0.7;
 }
 
 header img:hover {
@@ -153,6 +163,89 @@ footer {
 }
 
 
+.donations {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.donations h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.donations button#close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.donations button#close img {
+    width: 20px;
+    height: 20px;
+}
+
+.donations-main {
+    margin-top: 20px;
+}
+
+.donations-main form input[type="text"],
+.donations-main form input[type="number"],
+.donations-main form input[type="checkbox"] {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.donations-main form label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.donations-main form input[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.donations-main form input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+.donaters {
+    margin-top: 20px;
+}
+
+.donaters h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.donaters table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.donaters table th,
+.donaters table td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.donaters table th {
+    background-color: #f2f2f2;
+}
+
+
+
 
 .fig {
     display: flex;
@@ -226,6 +319,28 @@ footer {
     background-color: #eee;
 }
 
+.calc .table1{
+    border-collapse: collapse;
+    margin-top: 40px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.calc .table1 th, .calc .table1 td {
+    border: 1px solid #ddd;
+}
+  
+.calc .table1 th, .calc .table1 td {
+    padding: 8px;
+    text-align: left;
+}
+
+.calc .table1 th {
+    background-color: #ddd;
+    text-align: center;
+    border: 1px solid #bbb;
+}
+
 .calc #info{
     position: relative;
     bottom: 30px;
@@ -251,7 +366,18 @@ footer {
     background-color: #0056b3;
 }
 
-canvas {
-    border: 2px solid #ccc;
+canvas, .view {
+    border: 1px solid #ccc;
     width: 100%;
+}
+
+.view img {
+    width: 50%;
+    pointer-events: none;
+}
+
+.view {
+    background-color: white;
+    display: flex;
+    justify-content: center;
 }

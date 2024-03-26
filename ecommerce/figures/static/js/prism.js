@@ -10,7 +10,7 @@ function drawPrism(n, s, h) {
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2 + 100;
     const radius = 75;
-    h = h/s * 85 / (n / Math.PI);
+    h = h/s * 85 / (n / 4);
     const angle = (2 * Math.PI) / n;
 
     // Corners
@@ -50,6 +50,12 @@ const showError = () => {
     info.style.display = "block";
 };
 
+const showError2 = () => {
+    const info = document.getElementById("info");
+    info.innerHTML = "Prism base must be made of<br> at least three sides.";
+    info.style.display = "block";
+};
+
 const hideError = () => {
     const info = document.getElementById("info");
     info.style.display = "none";
@@ -60,7 +66,10 @@ const calculatePrism = () => {
     const s = parseFloat(form1.num_s.value);
     const h = parseFloat(form1.num_h.value);
 
-    if (isNaN(n) || isNaN(s) || isNaN(h)) {
+    if (n < 3) {
+        showError2();
+        return;
+    } else if(isNaN(n) || isNaN(s) || isNaN(h)) {
         showError();
         return;
     } else {
