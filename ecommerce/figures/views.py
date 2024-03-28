@@ -1,5 +1,14 @@
+"""
+Zadanie zaliczeniowe z Django
+Imię i nazwisko ucznia: Damian Kwasigroch
+Data wykonania zadania: 28.03.2024
+Treść zadania: Aplikacja licząca powierzchnie i objętości różnych figur
+Opis funkcjonalności aplikacji: Aplikacja umożliwia obliczanie właściwości różnych figur
+"""
+
 from django.shortcuts import render
 from .models import Donation
+from .payment import do_payment
 
 def donate(request):
     donations = Donation.objects.all()
@@ -20,6 +29,7 @@ def donate(request):
         else:
             hide_name = True
         
+        do_payment(amount) # TODO: Handle payment
 
         donation = Donation.objects.create(name=name, amount=amount, hide_name=hide_name, hide_amount=hide_amount)
         donation.save()

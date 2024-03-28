@@ -77,7 +77,7 @@ const calculateTesseract = () => {
     }
 
     const V = Math.pow(s, n);
-    const A = s * E(2, n);
+    const A = Math.pow(s, 2) * E(2, n);
 
     form1.num_V.value = parseFloat(V.toFixed(12));
     form1.num_A.value = parseFloat(A.toFixed(12));
@@ -90,6 +90,19 @@ const calculateTesseract = () => {
 
     let tableContainer = document.querySelector(".control");
     tableContainer.append(generateTable(n));
+
+    let image = document.getElementById('image');
+    if (n == 2) {
+        image.src = "/figures/static/images/square.svg";
+    } else if (n == 3) {
+        image.src = "/figures/static/images/cube.svg";
+    } else if (n == 5) {
+        image.src = "https://i.redd.it/oetkoa5y3zt91.gif";
+    } else if (n == 6) {
+        image.src = "https://upload.wikimedia.org/wikipedia/commons/7/7a/Hexeract-q1q4-q2q5-q3q6.gif";
+    } else {
+        image.src = "https://s2lab.cs.ucl.ac.uk/images/tesseract.gif";
+    }
 };
 
 document.getElementById("calculate").addEventListener("click", calculateTesseract);

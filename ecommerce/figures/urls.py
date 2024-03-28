@@ -1,3 +1,11 @@
+"""
+Zadanie zaliczeniowe z Django
+Imię i nazwisko ucznia: Damian Kwasigroch
+Data wykonania zadania: 28.03.2024
+Treść zadania: Aplikacja licząca powierzchnie i objętości różnych figur
+Opis funkcjonalności aplikacji: Aplikacja umożliwia obliczanie właściwości różnych figur
+"""
+
 from django.urls import path
 from . import views
 

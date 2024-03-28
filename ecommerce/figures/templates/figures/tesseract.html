@@ -24,11 +24,11 @@
 {% block content %}
     <div class="calc">
         <section class="view">
-            <img src="https://s2lab.cs.ucl.ac.uk/images/tesseract.gif" alt="tesseract">
+            <img id="image" src="https://s2lab.cs.ucl.ac.uk/images/tesseract.gif" alt="tesseract">
         </section>
         <section class="control">
             <form name="form1" method="post">
-                <input type="number" name="num_n" min="3" step="1" value="4"> <label for="num_n">Number of Dimensions (n)</label>
+                <input type="number" name="num_n" min="2" step="1" value="4"> <label for="num_n">Number of Dimensions (n)</label>
                 <input type="number" name="num_s"> <label for="num_s">Edge Length (s)</label>
                 <input type="button" value="Calculate" id="calculate">
                 <p id="info" style="color: red;"></p>
