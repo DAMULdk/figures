@@ -1,41 +1,89 @@
 from django.shortcuts import render
+from .models import Donation
+
+def donate(request):
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
+
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        amount = request.POST.get('amount')
+        hide_name = request.POST.get('hide_name')
+        hide_amount = request.POST.get('hide_amount')
+        if hide_amount == None:
+            hide_amount = False
+        else:
+            hide_amount = True
+
+        if hide_name == None:
+            hide_name = False
+        else:
+            hide_name = True
+        
+
+        donation = Donation.objects.create(name=name, amount=amount, hide_name=hide_name, hide_amount=hide_amount)
+        donation.save()
+
+        return render(request, 'figures/thank_you.html', context)
+    else:
+        return render(request, 'figures/thank_you.html', context)
+    
+def donaters_table(request):
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
+    return render(request, 'figures/donaters_table.html', context)
+
+def thank_you(request):
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
+    return render(request, 'thank_you.html', context)
 
 def menu(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/menu.html', context)
 
 def square(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/square.html', context)
 
 def triangle(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/triangle.html', context)
 
 def circle(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/circle.html', context)
 
 def rectangle(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/rectangle.html', context)
 
 def cube(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/cube.html', context)
 
 def sphere(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/sphere.html', context)
 
 def prism(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/prism.html', context)
 
 def tesseract(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/tesseract.html', context)
 
 def human(request):
-    context = {}
+    donations = Donation.objects.all()
+    context = {'donations': reversed(donations)}
     return render(request, 'figures/human.html', context)

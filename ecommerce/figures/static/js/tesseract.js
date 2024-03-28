@@ -8,7 +8,7 @@ function factorial(num) {
 }
 
 function E(m, n) {
-    return Math.pow(2, (n - m)) * (factorial(n) / (factorial(m) * factorial(n - m)));
+    return Math.round(Math.pow(2, (n - m)) * (factorial(n) / (factorial(m) * factorial(n - m))));
 }
 
 function generateTable(n) {
@@ -54,8 +54,6 @@ function generateTable(n) {
     
     return table;
 }
-
-
 
 
 const calculateTesseract = () => {

@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = 1000;
 canvas.height = 500;
 
-const side = 200; // Długość boku kwadratu
+const side = 200;
 
 function drawSquare(a, A, p, d) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);

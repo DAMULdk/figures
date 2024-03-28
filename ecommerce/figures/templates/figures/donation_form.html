@@ -1,0 +1,8 @@
+<form name="form2" action="/donate/" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Your name" required> <label for="name">Name</label> <br>
+    <input type="number" name="amount" value="5" min="1" required> <label for="amount">Amount (USD)</label> <br>
+    <input type="checkbox" name="hide_name"> <label for="hideName">Hide Name</label> <br>
+    <input type="checkbox" name="hide_amount"> <label for="hideAmount">Hide Amount</label> <br>
+    <input type="submit" value="Donate!">
+</form>

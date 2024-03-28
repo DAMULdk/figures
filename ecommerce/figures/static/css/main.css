@@ -164,68 +164,71 @@ footer {
 
 
 .donations {
-    background-color: #f9f9f9;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: 400px;
 }
 
-.donations h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.donations button#close {
+#close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
 }
 
-.donations button#close img {
-    width: 20px;
-    height: 20px;
+#close img {
+    width: 25px;
+}
+
+#close:hover img {
+    opacity: 0.8;
 }
 
 .donations-main {
     margin-top: 20px;
 }
 
-.donations-main form input[type="text"],
-.donations-main form input[type="number"],
-.donations-main form input[type="checkbox"] {
-    margin-bottom: 10px;
-    padding: 5px;
+.donations-main input[type="text"],
+.donations-main input[type="number"],
+.donations-main input[type="submit"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.donations-main form label {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.donations-main form input[type="button"] {
-    background-color: #007bff;
-    color: #fff;
+.donations-main input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    padding: 10px;
     cursor: pointer;
 }
 
-.donations-main form input[type="button"]:hover {
-    background-color: #0056b3;
+.donations-main input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
 .donaters {
+    background-color: #f2f2f2;
     margin-top: 20px;
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
 }
 
 .donaters h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    text-align: center;
+    margin: 8px;
 }
 
 .donaters table {
@@ -233,18 +236,20 @@ footer {
     border-collapse: collapse;
 }
 
-.donaters table th,
-.donaters table td {
-    border-bottom: 1px solid #ddd;
+.donaters th,
+.donaters td {
     padding: 8px;
+    border: 1px solid #ddd;
     text-align: left;
 }
 
-.donaters table th {
+.donaters th {
     background-color: #f2f2f2;
 }
 
-
+#donationPopup {
+    display: none;
+}
 
 
 .fig {
@@ -307,7 +312,7 @@ footer {
     align-items: center;
 }
 
-.calc input[type="number"] {
+.calc input[type="number"], .donations input {
     margin-top: 10px;
     padding: 5px;
     border: 1px solid #ccc;
